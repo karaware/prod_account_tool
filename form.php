@@ -2,9 +2,9 @@
 
 //MySQLのログイン情報
 $dbname =  $_REQUEST['gw'];
-$host = '202.78.218.212';
+$host = '192.168.25.150';
 $user = 'root';
-$pwd = '1qazxsw2';
+$pwd = 'q4l3o2o0g424arao';
 
 //アカウント情報を変数に入れる
 $name         = $_REQUEST['name'];
@@ -130,17 +130,17 @@ $pdo = null;
 	</thead>
 	<tbody>
 	<tr>
-	<td><?=htmlspecialchars($row['id'])?></td>
-	<td><?=htmlspecialchars($row['name'])?></td>
-	<td><?=htmlspecialchars($row['callerid'])?></td>
-	<td><?=htmlspecialchars($row['context'])?></td>
-	<td><?=htmlspecialchars($row['insecure'])?></td>
-	<td><?=htmlspecialchars($row['type'])?></td>
-	<td><?=htmlspecialchars($row['host'])?></td>
-	<td><?=htmlspecialchars($row['secret'])?></td>
-	<td><?=htmlspecialchars($row['allow'])?></td>
-	<td><?=htmlspecialchars($row['nat'])?></td>
-	<td><?=htmlspecialchars($row['setvar'])?></td>
+	<td><?php print(htmlspecialchars($row['id'])) ?></td>
+	<td><?php print(htmlspecialchars($row['name'])) ?></td>
+	<td><?php print(htmlspecialchars($row['callerid'])) ?></td>
+	<td><?php print(htmlspecialchars($row['context'])) ?></td>
+	<td><?php print(htmlspecialchars($row['insecure'])) ?></td>
+	<td><?php print(htmlspecialchars($row['type'])) ?></td>
+	<td><?php print(htmlspecialchars($row['host'])) ?></td>
+	<td><?php print(htmlspecialchars($row['secret'])) ?></td>
+	<td><?php print(htmlspecialchars($row['allow'])) ?></td>
+	<td><?php print(htmlspecialchars($row['nat'])) ?></td>
+	<td><?php print(htmlspecialchars($row['setvar'])) ?></td>
 	</tr>
 	</tbody>
     </table>
@@ -201,8 +201,14 @@ $pdo = null;
     <div class="panel panel-default">
     	<div class="panel-heading"><h2 class="panel-title">Rejister String</h2></div>
     	<div class="panel-body">
-	    <p><? echo $name; ?>:<? echo $secret; ?>@<? echo $db_ip; ?>/<? echo $num; ?></p>
-    	</div>
+	if($dbname == "asterisk"){
+	    $db_ip = "202.78.218.73";
+	    <p><?php echo $name; ?>:<?php echo $secret; ?>@<?php echo $db_ip; ?>/<?php echo $num; ?><br><br></p>
+	    $db_ip = "202.78.218.74";
+	<p><?php echo $name; ?>:<?php echo $secret; ?>@<?php echo $db_ip; ?>/<?php echo $num; ?></p>
+    	if($dbname == "asterisk"){
+	$db_ip = "202.78.218.73";
+	</div>
     	</div>
 
     	<br /><a href="account-tool.html">戻る</a></p>
