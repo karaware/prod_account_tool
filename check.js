@@ -14,6 +14,9 @@ $(function(){
 jQuery(function(){
     jQuery("#form_1").validationEngine();
 });
+jQuery(function(){
+    jQuery("#form_2").validationEngine();
+});
 
 
 /* パスワード生成ツール */
