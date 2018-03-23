@@ -76,7 +76,7 @@
                 },
                 "phone_name": {
                     // credit: jquery.h5validate.js / orefalo
-                    "regex":/^[0-9][0-9][0-9][0-9]{9}$/,
+                    "regex":/^000[0-9]{9}$/,
                     "alertText": "* 電話番号が正しくありません"
                 },
                 "phone_outnum": {

@@ -1,0 +1,18 @@
+AuthUserFile /var/www/html/gw_account_manager/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Please enter your ID and password"
+AuthType Basic
+require valid-user
+
+order deny,allow
+deny from all
+Allow from 124.110.137.17
+Allow from 58.81.121.186
+Allow from 118.243.93.176
+Allow from 61.194.71.212
+Allow from 103.17.191.129
+Allow from 131.129.221.44
+Allow from 210.152.11.122
+Allow from 153.150.26.6
+Allow from 113.34.180.226
+

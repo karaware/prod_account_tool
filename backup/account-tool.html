@@ -58,6 +58,72 @@
             <br><br>
             <input type="submit" name="" id="btn_submit">
         </form>
-	</div>
+
+        <!-- ▼追加履歴表示 -->
+
+	<?php session_start(); ?>
+	<?php
+	//MySQLのログイン情報
+	$dbname =  'gwat';
+	$host = 'localhost';
+	$user = 'root';
+	$pwd = 'q4l3o2o0g424arao';
+	//DSN(Date Source Name)　([DSN接頭辞]:host=[ホスト名];dbname=[データベース名];charset=[文字コード])
+	$dsn  = 'mysql:host=' . $host . ';dbname=' . $dbname . ';charset=utf8';
+
+	//データベースに接続
+        try{
+        //PDO(PHP Date Objects)による接続
+        //$変数 = new PDO([DSN],[ユーザ名],[パスワード])  [DSN]は上で宣言した変数$dsnの中身([DSN接頭辞]:host=[ホスト名];dbname=[データベース名];charset=[文字コード])が入る
+        $pdo = new PDO($dsn,$user,$pwd);
+        //以下はエラーハンドラ
+        //ERRMODEにERRMODE_EXCEPTIONを選択する(エラーを検知した時に例外を投げる。4行下のcatchへ移動する。)
+        $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+        //プリペアドステートメントに関する属性。ATTR_EMULATE_PREPARESにfalseを設定する
+        $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
+        //print("データベースに接続しました,,,<br>");
+        }catch (PDOExpention $Exception){
+        die('データベースに接続できませんでした。<br>' . $Exception->getMessage());
+        }
+        $stmh = $pdo->query('SELECT id,name,setvar,secret,user,register_time FROM history ORDER BY id DESC');
+        if(!$stmh){
+            $info = $pdo -> errorInfo();
+            exit($info[2]);
+        }
+	?>	
+
+        <br><br><h2 class="page-header">追加履歴</h2>
+	
+        <div class="container-fluid">
+        <div class="table-responsive">
+        <table class="table table-bordered table-condensed" width="450" height="50" border="1" cellspacing="0" cellpadding="8">
+            <thead>
+            <tr><th>id</th><th>name</th><th>setvar</th><th>secret</th><th>user</th><th>register_time</th></tr>
+            </thead>
+            <tbody>
+                <?php
+                        while($table = $stmh->fetch(PDO::FETCH_ASSOC)){
+                        $count += 1;
+                        ?>
+                        <tr>
+                                <td><?php print(htmlspecialchars($table['id'])); ?></td>
+                                <td><?php print(htmlspecialchars($table['name'])); ?></td>
+                                <td><?php print(htmlspecialchars($table['setvar'])); ?></td>
+                                <td><?php print(htmlspecialchars($table['secret'])); ?></td>
+                                <td><?php print(htmlspecialchars($table['user'])); ?></td>
+                                <td><?php print(htmlspecialchars($table['register_time'])); ?></td>
+                        </tr>
+                        <?php
+                        if($count > 9){
+                            break;
+                        }
+                        }
+                ?>
+            </tbody>
+        </table>
+        </div>
+        </div>
+    </div>
     </body>
 </html>
+
