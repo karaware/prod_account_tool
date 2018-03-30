@@ -46,7 +46,7 @@
             <div class="radio"><label><input type="radio" class="validate[required]" name="gw" id="radio2" value="asterisk_sb">SB GW2(asterisk_sb)</label></div>
             <div class="radio"><label><input type="radio" class="validate[required]" name="gw" id="radio3" value="asterisk_sb3">SB GW3(asterisk_sb3)</label></div>
             <div class="radio"><label><input type="radio" class="validate[required]" name="gw" id="radio4" value="asterisk_ncom">N-COM GW(asterisk_ncom)</label></div>
-            <div class="radio"><label><input type="radio" class="validate[required]" name="gw" id="radio5" value="asterisk_ncom_u">ウミガメ N-COM GW(asterisk_ncom)</label></div><br>
+<!--            <div class="radio"><label><input type="radio" class="validate[required]" name="gw" id="radio5" value="asterisk_ncom_u">ウミガメ N-COM GW(asterisk_ncom)</label></div><br>  -->
         <label>"00" + 下番号を入力</label>
             <input type="text" name="name" value="00" class="validate[required,custom[phone_name],minSize[12],maxSize[12]]">
             <label>&emsp;表示番号を入力</label>
