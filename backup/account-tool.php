@@ -23,8 +23,7 @@
         <div class="container">
             <!-- 2.ヘッダ情報 -->
             <div class="navbar-header">
-                <!-- <a href="#" class="navbar-brand"><img src="logo_qloog.gif"></a> -->
-                <a href="#" class="navbar-brand"><img src="prodlog.png"></a>
+                <a href="#" class="navbar-brand"><img src="logo_qloog.gif"></a>
             </div>
             <!-- 3.リストの配置 -->
             <ul  class="nav navbar-nav">
@@ -48,15 +47,13 @@
             <div class="radio"><label><input type="radio" class="validate[required]" name="gw" id="radio3" value="asterisk_sb3">SB GW3(asterisk_sb3)</label></div>
             <div class="radio"><label><input type="radio" class="validate[required]" name="gw" id="radio4" value="asterisk_ncom">N-COM GW(asterisk_ncom)</label></div>
 <!--            <div class="radio"><label><input type="radio" class="validate[required]" name="gw" id="radio5" value="asterisk_ncom_u">ウミガメ N-COM GW(asterisk_ncom)</label></div><br>  -->
-            <label>"00" + 下番号を入力&emsp;&emsp;&emsp;&emsp;&emsp;</label>
-            <input type="text" name="name" value="00" class="validate[required,custom[phone_name],minSize[12],maxSize[12]]"><br>
-            <label>表示番号を入力&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>
-            <input type="text" name="setvar" class="validate[required,,custom[phone_outnum],minSize[10],maxSize[11]]"><br>
-            <label>パスワードを入力</label>
+        <label>"00" + 下番号を入力</label>
+            <input type="text" name="name" value="00" class="validate[required,custom[phone_name],minSize[12],maxSize[12]]">
+            <label>&emsp;表示番号を入力</label>
+            <input type="text" name="setvar" class="validate[required,,custom[phone_outnum],minSize[10],maxSize[11]]">
+            <label>&emsp;パスワードを入力</label>
             <input type="button" value="自動生成" onclick="getPassword();">
-            <input type="text" name="secret" id="result" class="validate[required]"><br>
-            <label>お客様名を入力&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>
-            <input type="text" name="customer" class="validate[required]">
+            <input type="text" name="secret" id="result" class="validate[required]">
             <br><br>
             <input type="submit" name="" id="btn_submit">
         </form>
