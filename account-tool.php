@@ -70,7 +70,7 @@
 $dbname =  'gwat';
 $host = 'localhost';
 $user = 'root';
-$pwd = 'q4l3o2o0g424arao';
+$pwd = 'XXXXXX';
 //DSN(Date Source Name)　([DSN接頭辞]:host=[ホスト名];dbname=[データベース名];charset=[文字コード])
 $dsn  = 'mysql:host=' . $host . ';dbname=' . $dbname . ';charset=utf8';
 

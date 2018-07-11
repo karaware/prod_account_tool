@@ -7,7 +7,7 @@ $dbname =  "asterisk_sb_test";
 //$host = '192.168.25.150';//本番環境
 $host = 'localhost';
 $user = 'root';
-$pwd = 'q4l3o2o0g424arao';
+$pwd = 'XXXXXX';
 
 
 //アカウント情報を変数に入れる
@@ -252,7 +252,7 @@ $prefix_result = get_prefix($dbname);
 $gwat_dbname =  'gwat';
 $host = 'localhost';
 $user = 'root';
-$pwd = 'q4l3o2o0g424arao';
+$pwd = 'XXXXXX';
 //DSN(Date Source Name)　([DSN接頭辞]:host=[ホスト名];dbname=[データベース名];charset=[文字コード])
 $dsn  = 'mysql:host=' . $host . ';dbname=' . $gwat_dbname . ';charset=utf8';
 $register_time = date('Y-n-j H:i:s');

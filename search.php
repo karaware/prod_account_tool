@@ -64,7 +64,7 @@
     //$dbname =  'test';
     $host = '192.168.25.150';
     $user = 'root';
-    $pwd = 'q4l3o2o0g424arao';
+    $pwd = 'XXXXXX';
     $dbname = $_REQUEST['gw'];
     //if(empty($dbname)){
         //$dbname = "asterisk";
